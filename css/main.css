@@ -17,15 +17,44 @@ p {
   line-height: 1.6;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(29, 29, 31);
+}
+
+/* 메뉴 스타일링 */
+
 .global-nav {
   height: 44px;
 }
+.local-nav {
+  height: 52px;
+  border-bottom: 1px solid #ddd;
+}
 
-.glbal-nav-links {
+.global-nav-links,
+.local-nav-links {
   max-width: 1000px;
   margin: 0 auto;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.global-nav-links {
+  justify-content: space-between;
+}
+
+.local-nav-links .product-name {
+  margin-right: auto;
+  /* css 우선순위 고려 */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.local-nav-links a {
+  font-size: 0.8rem;
+}
+.local-nav-links a:not(.product-name) {
+  margin-left: 2em;
 }
